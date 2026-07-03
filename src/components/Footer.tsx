@@ -43,24 +43,33 @@ export function Footer() {
               <h4 className="text-sm font-semibold text-white mb-4">Contact</h4>
               <ul className="space-y-2.5 text-sm text-white/60">
                 <li>help@energyone.io</li>
-                <li>+1 (800) 555-0180</li>
+                <li>
+                  <a href="tel:+18886129878" className="hover:text-white transition-colors">
+                    +1 (888) 612-9878
+                  </a>
+                </li>
                 <li>24/7 Emergency Line</li>
                 <li>London · Berlin · NYC</li>
               </ul>
             </div>
           </div>
-          <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
-            <span>© {new Date().getFullYear()} EnergyOne. All rights reserved.</span>
-            <div className="flex gap-5">
-              <a href="#" className="hover:text-white">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-white">
-                Terms
-              </a>
-              <a href="#" className="hover:text-white">
-                Cookies
-              </a>
+          <p className="mt-10 text-center text-xs text-white/50">
+            Calls may be recorded for quality and assurance purposes
+          </p>
+          <div className="mt-6 pt-6 border-t border-white/10">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+              <span>© {new Date().getFullYear()} EnergyOne. All rights reserved.</span>
+              <div className="flex gap-5">
+                <a href="#" className="hover:text-white">
+                  Privacy
+                </a>
+                <a href="#" className="hover:text-white">
+                  Terms
+                </a>
+                <a href="#" className="hover:text-white">
+                  Cookies
+                </a>
+              </div>
             </div>
           </div>
         </div>
