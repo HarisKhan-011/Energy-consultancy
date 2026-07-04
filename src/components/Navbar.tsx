@@ -17,14 +17,14 @@ export function Navbar() {
   return (
     <div className="sticky top-4 z-50">
       <div className="container-90">
-        <nav className="glass-strong flex items-center justify-between gap-4 px-4 py-3 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
+        <nav className="glass-strong flex items-center justify-between gap-4 px-4 py-3 rounded-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)] animate-slide-down">
           <Logo />
           <div className="hidden lg:flex items-center gap-1">
             {links.map((l) => (
               <a
                 key={l.label}
                 href={l.to}
-                className="px-3.5 py-2 text-sm text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                className="px-3.5 py-2 text-sm text-white/70 hover:text-white transition-colors rounded-lg hover:bg-white/5 hover:scale-105"
               >
                 {l.label}
               </a>
@@ -39,7 +39,7 @@ export function Navbar() {
             </Link>
             <a
               href="#services"
-              className="btn-shine relative px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#2f80ed] to-[#35d6ff] text-white text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,128,237,0.8)] hover:shadow-[0_16px_40px_-10px_rgba(53,214,255,0.9)] transition-shadow"
+              className="btn-shine relative px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#2f80ed] to-[#35d6ff] text-white text-sm font-semibold shadow-[0_10px_30px_-10px_rgba(47,128,237,0.8)] hover:shadow-[0_16px_40px_-10px_rgba(53,214,255,0.9)] hover:scale-[1.03] active:scale-[0.98] transition-all"
             >
               Book Service
             </a>

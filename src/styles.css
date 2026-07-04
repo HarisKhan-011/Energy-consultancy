@@ -79,13 +79,14 @@
 
   --grad-tech: linear-gradient(135deg, #2f80ed 0%, #35d6ff 100%);
   --grad-energy: linear-gradient(135deg, #ffb020 0%, #ff6b3d 100%);
-  --grad-hero: radial-gradient(1200px 600px at 20% -10%, rgba(47,128,237,0.35), transparent 60%),
-               radial-gradient(900px 500px at 90% 10%, rgba(53,214,255,0.20), transparent 60%),
-               radial-gradient(700px 400px at 70% 90%, rgba(255,176,32,0.15), transparent 60%);
+  --grad-hero:
+    radial-gradient(1200px 600px at 20% -10%, rgba(47, 128, 237, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(53, 214, 255, 0.2), transparent 60%),
+    radial-gradient(700px 400px at 70% 90%, rgba(255, 176, 32, 0.15), transparent 60%);
 
-  --shadow-glow-blue: 0 20px 60px -20px rgba(47,128,237,0.55);
-  --shadow-glow-amber: 0 20px 60px -20px rgba(255,176,32,0.45);
-  --shadow-card: 0 12px 40px -12px rgba(0,0,0,0.6);
+  --shadow-glow-blue: 0 20px 60px -20px rgba(47, 128, 237, 0.55);
+  --shadow-glow-amber: 0 20px 60px -20px rgba(255, 176, 32, 0.45);
+  --shadow-card: 0 12px 40px -12px rgba(0, 0, 0, 0.6);
 }
 
 .dark {
@@ -98,7 +99,8 @@
     border-color: var(--color-border);
   }
 
-  html, body {
+  html,
+  body {
     background-color: #080b10;
     color: var(--color-foreground);
     font-family: var(--font-sans);
@@ -107,14 +109,17 @@
 
   body {
     background-image:
-      radial-gradient(1200px 700px at 15% -10%, rgba(47,128,237,0.18), transparent 60%),
-      radial-gradient(900px 600px at 100% 5%, rgba(53,214,255,0.10), transparent 60%),
+      radial-gradient(1200px 700px at 15% -10%, rgba(47, 128, 237, 0.18), transparent 60%),
+      radial-gradient(900px 600px at 100% 5%, rgba(53, 214, 255, 0.1), transparent 60%),
       linear-gradient(180deg, #080b10 0%, #080b10 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
@@ -127,23 +132,23 @@
 }
 
 @utility glass {
-  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
   backdrop-filter: blur(18px) saturate(140%);
   border: 1px solid var(--hairline);
   border-radius: 1.25rem;
 }
 
 @utility glass-strong {
-  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
   backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(255,255,255,0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.25rem;
 }
 
 @utility grid-bg {
   background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
 }
@@ -173,7 +178,12 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%);
+    background: linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 70%
+    );
     transform: translateX(-120%);
     transition: transform 0.8s ease;
   }
@@ -183,22 +193,122 @@
 }
 
 @keyframes float-y {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(24px, -18px) scale(1.06);
+  }
+  66% {
+    transform: translate(-18px, 14px) scale(0.94);
+  }
+}
+@keyframes bar-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes progress-fill {
+  from {
+    width: 0;
+  }
 }
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-@utility animate-float { animation: float-y 5s ease-in-out infinite; }
-@utility animate-pulse-glow { animation: pulse-glow 2.4s ease-in-out infinite; }
-@utility animate-fade-up { animation: fade-up 0.7s ease-out both; }
+@utility animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+@utility animate-pulse-glow {
+  animation: pulse-glow 2.4s ease-in-out infinite;
+}
+@utility animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+@utility animate-slide-down {
+  animation: slide-down 0.65s ease-out both;
+}
+@utility animate-scale-in {
+  animation: scale-in 0.7s ease-out both;
+}
+@utility animate-blob-drift {
+  animation: blob-drift 14s ease-in-out infinite;
+}
+@utility animate-bar-grow {
+  animation: bar-grow 0.8s ease-out both;
+  transform-origin: bottom;
+}
+@utility animate-progress-fill {
+  animation: progress-fill 1.4s ease-out both;
+}
+@utility animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
