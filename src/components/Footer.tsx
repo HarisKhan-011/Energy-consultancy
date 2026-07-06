@@ -49,7 +49,7 @@ export function Footer() {
                   </a>
                 </li>
                 <li>24/7 Emergency Line</li>
-                <li>London · Berlin · NYC</li>
+                <li> New York</li>
               </ul>
             </div>
           </div>
